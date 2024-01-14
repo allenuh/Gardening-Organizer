@@ -1,0 +1,150 @@
+body{
+    background-color: lightgray;
+}
+
+.container{
+    background-color: lightgray;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 94%;
+    padding: 10px;
+    margin: 0px auto;
+    justify-content: center;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.8);
+}
+
+.gallery-item {
+    flex-basis: 23%;
+    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* lightbox */
+.lightbox{
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+}
+
+.lightbox-content{
+    position: relative;
+    width: 480px;
+    height: 480px;
+    border: 6px solid #e2ffe7b4;
+    float: left;
+}
+
+.lightbox-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lightbox-content-container{
+    display:flex;
+    justify-content: center;
+    box-shadow: 0 0 3px 0 rgba(0,0,0, 0.5);
+    margin: 100px auto 0 auto;
+    width: fit-content;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    width: 40px;
+    justify-content: center;
+    top: 45%;
+    cursor: pointer;
+}
+
+.lightbox-prev{
+    left: 0;
+}
+
+.lightbox-next{
+    right: 0;
+}
+
+.lightbox-description {
+    position: relative;
+    width: 480px;
+    height: 480px;
+    background-color: whitesmoke;
+    border: 6px solid #fff;
+    float: right;
+}
+
+.lightbox-description a{
+    position: absolute;
+    color: black;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: grey;
+    text-decoration: none;
+    border: solid 1px black;
+}
+
+.lightbox-description a:hover{
+    position: absolute;
+    color: black;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: darkgray;
+    text-decoration: none;
+    border: solid 1px black;
+}
+
+/* make it responsive */
+@media (max-width: 767px){
+    .gallery-container{
+        width: 100%;
+    }
+    .gallery-item{
+        flex-basis: 49.8%;
+        margin-bottom: 3px;
+    }
+    .lightbox-content{
+        width: 80%;
+        height: 60%;
+        margin: 15% auto;
+    }
+    .lightbox-description {
+        width: 100%;
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}
+
+@media (max-width: 480px){
+    .gallery-item{
+        flex-basis: 100%;
+        margin-bottom: 1px;
+    }
+    .lightbox-content{
+        width: 90%;
+        margin: 20px auto;
+    }
+}

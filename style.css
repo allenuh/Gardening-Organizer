@@ -1,0 +1,161 @@
+body{
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginbox{
+    height: 100vh;
+}
+
+*{
+    font-family: serif;
+    box-sizing: border-box;
+}
+
+form{
+    width: 500px;
+    border: 2px solid #ccc;
+    padding: 30px;
+    background: #fff;
+}
+
+h2{
+    text-align: center;
+}
+
+.logintext{
+    margin-bottom: 40px;
+}
+
+input{
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto
+}
+
+label{
+    color: #888;
+    font-size: 14px;
+    padding: 5px;
+}
+
+button{
+    float: right;
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    margin-right: 10px;
+    border: none;
+}
+
+button:hover{
+    opacity:0.7;
+}
+
+.error{
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 2px;
+    margin: 20px auto;
+}
+
+.success{
+    background: #D4EDDA;
+    color: #40754C;
+    padding: 10px;
+    width: 95%;
+    border-radius: 2px;
+    margin: 20px auto;
+}
+
+h1{
+    text-align: center;
+    color: #000
+}
+
+.ca{
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px;
+    color: #444;
+    text-decoration: none;
+}
+
+.ca:hover{
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+li {
+    width: auto;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border: solid 1px black;
+    background-color: darkgray;
+    margin-right: 10px;
+}
+
+li:hover{
+    background-color: #858585;
+}
+
+header{
+    width: 100%;
+    flex-direction: row;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+div{
+    float: left;
+    padding: 10px;
+    display: inline;
+}
+
+.buttonify{
+    padding: 10px;
+    float: right;
+    background:gray;
+    border: 1px solid black;
+}
+
+.buttonify:hover{
+    background:darkgray;
+}
+
+.hello{
+    font-size: large;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
